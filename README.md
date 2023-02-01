@@ -49,7 +49,7 @@ Ps.: The delay will be executed after each 10 requests.
 
 If you want to change something, you just have to run ``make build`` after it.
 
-## Results
+# Results
 
 ### Config
 
