@@ -45,3 +45,6 @@ $ ./cli_bench --host localhost:6379 --requests 1000 --concurrency 10 --provider 
 Ps.: The delay will be executed after each 10 requests.
 
 
+## Build
+
+If you want to change something, you just have to run ``make build`` after it.
