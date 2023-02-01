@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Results</title>
+</head>
+<body>
+	<h1>Result in milliseconds</h1>
+	<p><b>Memcached get:</b> Red</p>
+	<p><b>Redis get:</b> Purple</p>
+	<canvas id="chartGet" style="width:100%; height: 400px;"></canvas>
+	
+	<p><b>Memcached set:</b> Blue</p>
+	<p><b>Redis set:</b> Green</p>
+	<canvas id="chartSet" style="width:100%; height: 400px;"></canvas>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script>
+		(async () => {
+
+			const memcachedGet = await fetch("memcached-get.json")
+			  .then(response => response.json())
+			  .then(data => data);
+			
+			const memcachedSet = await fetch("memcached-set.json")
+			  .then(response => response.json())
+			  .then(data => data);
+			
+			const redisGet = await fetch("redis-get.json")
+			  .then(response => response.json())
+			  .then(data => data);
+			
+			const redisSet = await fetch("redis-set.json")
+			  .then(response => response.json())
+			  .then(data => data);
+					
+			const labels = memcachedGet.map((_, key) => key)
+	
+			new Chart("chartGet", {
+				type: "line",
+				data: {
+					labels: labels,
+					datasets: [
+						{
+							data: memcachedGet,
+							borderColor: "red",
+							fill: false
+						},
+						{
+							data: redisGet,
+							borderColor: "purple",
+							fill: false
+						},
+					],
+				},
+				options: {
+					legend: {
+						display: false
+					},
+				},
+			});
+			
+			new Chart("chartSet", {
+				type: "line",
+				data: {
+					labels: labels,
+					datasets: [
+						{
+							data: memcachedSet,
+							borderColor: "blue",
+							fill: false
+						},
+						{
+							data: redisSet,
+							borderColor: "green",
+							fill: false
+						},
+					],
+				},
+				options: {
+					legend: {
+						display: false
+					},
+				},
+			});
+		})()
+	</script>
+</body>
+</html>
