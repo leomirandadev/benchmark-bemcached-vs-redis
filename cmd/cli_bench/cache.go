@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bench-memcached-vs-redis/cache"
+	"bench-memcached-vs-redis/pkg/cache"
 	"context"
 	"log"
 	"time"
