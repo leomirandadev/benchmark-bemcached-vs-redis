@@ -16,17 +16,17 @@ run bench to get without concurrency memcached
 $ ./cli_bench --host localhost:11211 --requests 1000 --provider memcached --action get --delay 10
 ```
 
-run bench to get without concurrency redis
-```shell
-$ ./cli_bench --host localhost:6379 --requests 1000 --provider redis --action get --delay 10
-```
-
 run bench to set without concurrency memcached
 ```shell
 $ ./cli_bench --host localhost:11211 --requests 1000 --provider memcached --action set --delay 10
 ```
 
 ## Redis
+
+run bench to get without concurrency redis
+```shell
+$ ./cli_bench --host localhost:6379 --requests 1000 --provider redis --action get --delay 10
+```
 
 run bench to set without concurrency redis
 ```shell
