@@ -53,10 +53,10 @@ If you want to change something, you just have to run ``make build`` after it.
 
 ### Config
 
-``RAM:`` 16 GB 2667 MHz DDR4
-``CPU:`` 2,3 GHz 8-Core Intel Core i9
-``Graphics:`` AMD Radeon Pro 5500M 4 GB and Intel UHD Graphics 630 1536 MB
-``OS:`` MacOS Ventura Version 13.1
+- ``RAM:`` 16 GB 2667 MHz DDR4
+- ``CPU:`` 2,3 GHz 8-Core Intel Core i9
+- ``Graphics:`` AMD Radeon Pro 5500M 4 GB and Intel UHD Graphics 630 1536 MB
+- ``OS:`` MacOS Ventura Version 13.1
 
 ### Setup
 ``Total Requests``: 1000
