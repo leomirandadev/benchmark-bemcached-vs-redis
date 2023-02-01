@@ -59,9 +59,9 @@ If you want to change something, you just have to run ``make build`` after it.
 - ``OS:`` MacOS Ventura Version 13.1
 
 ### Setup
-``Total Requests``: 1000
-``Concurrent Request``: 10
-``Delay between bunch of requests``: 10ns
+- ``Total Requests``: 1000
+- ``Concurrent Request``: 10
+- ``Delay between bunch of requests``: 10ns
 
 ### Result
 <img src="result.png" />
