@@ -58,10 +58,10 @@ If you want to change something, you just have to run ``make build`` after it.
 ``Graphics:`` AMD Radeon Pro 5500M 4 GB and Intel UHD Graphics 630 1536 MB
 ``OS:`` MacOS Ventura Version 13.1
 
-## Setup
+### Setup
 ``Total Requests``: 1000
 ``Concurrent Request``: 10
 ``Delay between bunch of requests``: 10ns
 
-## Result
+### Result
 <img src="result.png" />
